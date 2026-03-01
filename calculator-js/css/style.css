@@ -1,0 +1,82 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+img{
+  display: block;
+  margin: 0 auto;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+/* I need to centralize the main box */
+.mainBox{
+  width: 500px;
+  min-height: 500px;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 1fr;
+  grid-column-start: 1;
+  grid-column-end: 2; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  
+  gap: 10px;
+  max-width: 800px;
+  margin: auto;
+  border: 3px solid black;
+  border-radius: 50px;
+}
+
+.display{
+  grid-column: 1/-1;
+  border: 2px solid blue;
+  margin: 15px;
+  border-radius: 20px;
+  height: 100px;
+}
+
+.numbers{
+  margin-left: 15px;
+  /* border: 1px solid black; */
+  height: 330px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 5px;
+  column-gap: 5px;
+}
+
+.operators{
+  /* border: 1px solid black; */
+  margin-right: 15px;
+  height: 330px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+
+}
+
+#zero, #equal, #clear{
+  grid-column: 1/-1;
+}
+/* i need to make the numbers box beside the operators box in the main box */
+
+/* i need to make a box at the top to display the results */
